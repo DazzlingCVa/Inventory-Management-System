@@ -15,8 +15,13 @@ return new class extends Migration {
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->enum('role', ['Admin'])->default('Admin');
+            $table->enum('role', [
+                'admin',
+                'manager',
+                'staff'
+            ])->default('admin');
             $table->enum('status', ['Active', 'Inactive'])->default('Active');
+            $table->rememberToken();
             $table->timestamps();
         });
 
