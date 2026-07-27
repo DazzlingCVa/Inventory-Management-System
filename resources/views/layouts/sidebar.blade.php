@@ -23,7 +23,7 @@
 
         <li class="nav-item mb-2">
 
-            <a href="#"
+            <a href="{{ route("admin.categories.index") }}"
                class="nav-link text-white">
 
                 <i class="bi bi-folder"></i>
@@ -36,7 +36,7 @@
 
         <li class="nav-item mb-2">
 
-            <a href="#"
+            <a href="{{route("admin.suppliers.index")}}"
                class="nav-link text-white">
 
                 <i class="bi bi-truck"></i>
