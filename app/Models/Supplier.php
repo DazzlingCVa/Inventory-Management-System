@@ -15,4 +15,9 @@ class Supplier extends Model
         "gst_number",
         "status"
     ];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

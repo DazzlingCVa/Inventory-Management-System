@@ -10,8 +10,7 @@
 
         <li class="nav-item mb-2">
 
-            <a href="{{ route('admin.dashboard') }}"
-               class="nav-link text-white">
+            <a href="{{ route('admin.dashboard') }}" class="nav-link text-white">
 
                 <i class="bi bi-speedometer2"></i>
 
@@ -23,8 +22,7 @@
 
         <li class="nav-item mb-2">
 
-            <a href="{{ route("admin.categories.index") }}"
-               class="nav-link text-white">
+            <a href="{{ route("admin.categories.index") }}" class="nav-link text-white">
 
                 <i class="bi bi-folder"></i>
 
@@ -36,8 +34,7 @@
 
         <li class="nav-item mb-2">
 
-            <a href="{{route("admin.suppliers.index")}}"
-               class="nav-link text-white">
+            <a href="{{route("admin.suppliers.index")}}" class="nav-link text-white">
 
                 <i class="bi bi-truck"></i>
 
@@ -49,8 +46,7 @@
 
         <li class="nav-item mb-2">
 
-            <a href="#"
-               class="nav-link text-white">
+            <a href="{{route("admin.products.index")}}" class="nav-link text-white">
 
                 <i class="bi bi-box"></i>
 
@@ -62,8 +58,7 @@
 
         <li class="nav-item mb-2">
 
-            <a href="#"
-               class="nav-link text-white">
+            <a href="#" class="nav-link text-white">
 
                 <i class="bi bi-cart-plus"></i>
 
@@ -75,8 +70,7 @@
 
         <li class="nav-item mb-2">
 
-            <a href="#"
-               class="nav-link text-white">
+            <a href="#" class="nav-link text-white">
 
                 <i class="bi bi-cart-check"></i>
 
@@ -88,8 +82,7 @@
 
         <li class="nav-item mt-4">
 
-            <a href="{{ route('logout') }}"
-               class="btn btn-danger w-100">
+            <a href="{{ route('logout') }}" class="btn btn-danger w-100">
 
                 Logout
 
