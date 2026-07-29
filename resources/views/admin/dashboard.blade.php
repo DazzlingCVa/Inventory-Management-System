@@ -66,7 +66,7 @@
 
                     <h5>Total Sales</h5>
 
-                    <h2>0</h2>
+                    <h2>{{ $totalSales }}</h2>
 
                 </div>
 

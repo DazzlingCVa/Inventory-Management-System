@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\SaleController;
+use App\Http\Controllers\Admin\SaleReceiptController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -117,44 +119,99 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::delete('/products/{id}', [ProductController::class, 'destroy'])
         ->name('products.destroy');
 
-/*
+    /*
     |--------------------------------------------------------------------------
     | Pruchase
     |--------------------------------------------------------------------------
     */
 
-    Route::get('/purchases',
-        [PurchaseController::class,'index'])
+    Route::get(
+        '/purchases',
+        [PurchaseController::class, 'index']
+    )
         ->name('purchases.index');
 
-    Route::get('/purchases/create',
-        [PurchaseController::class,'create'])
+    Route::get(
+        '/purchases/create',
+        [PurchaseController::class, 'create']
+    )
         ->name('purchases.create');
 
-    Route::post('/purchases/store',
-        [PurchaseController::class,'store'])
+    Route::post(
+        '/purchases/store',
+        [PurchaseController::class, 'store']
+    )
         ->name('purchases.store');
 
-    Route::get('/purchases/{id}/edit',
-        [PurchaseController::class,'edit'])
+    Route::get(
+        '/purchases/{id}/edit',
+        [PurchaseController::class, 'edit']
+    )
         ->name('purchases.edit');
 
-    Route::put('/purchases/{id}',
-        [PurchaseController::class,'update'])
+    Route::put(
+        '/purchases/{id}',
+        [PurchaseController::class, 'update']
+    )
         ->name('purchases.update');
 
-    Route::delete('/purchases/{id}',
-        [PurchaseController::class,'destroy'])
+    Route::delete(
+        '/purchases/{id}',
+        [PurchaseController::class, 'destroy']
+    )
         ->name('purchases.destroy');
 
-/*
+    /*
     |--------------------------------------------------------------------------
     | Pruchase invoice PDF
     |--------------------------------------------------------------------------
     */
-    Route::get('/purchase-invoice/{id}',
-        [PurchaseReceiptController::class,'download'])
+
+    Route::get(
+        '/purchase-invoice/{id}',
+        [PurchaseReceiptController::class, 'download']
+    )
         ->name('purchase.invoice');
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Sales
+    |--------------------------------------------------------------------------
+    */
+    Route::get(
+        '/sales',
+        [SaleController::class, 'index']
+    )
+        ->name('sales.index');
+
+    Route::get(
+        '/sales/create',
+        [SaleController::class, 'create']
+    )
+        ->name('sales.create');
+
+    Route::post(
+        '/sales/store',
+        [SaleController::class, 'store']
+    )
+        ->name('sales.store');
+
+    Route::delete(
+        '/sales/{id}',
+        [SaleController::class, 'destroy']
+    )
+        ->name('sales.destroy');
+    /*
+    |--------------------------------------------------------------------------
+    | Sales invoice PDF
+    |--------------------------------------------------------------------------
+    */
+    Route::get(
+        '/sales/invoice/{id}',
+        [SaleReceiptController::class, 'download']
+    )
+        ->name('sales.invoice');
 
 
 });

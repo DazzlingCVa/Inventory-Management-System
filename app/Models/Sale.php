@@ -13,4 +13,9 @@ class Sale extends Model
         "sale_date",
         "total_amount"
     ];
+
+    public function saleItems()
+    {
+        return $this->hasMany(SaleItem::class);
+    }
 }

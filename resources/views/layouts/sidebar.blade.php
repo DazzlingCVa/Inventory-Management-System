@@ -70,7 +70,7 @@
 
         <li class="nav-item mb-2">
 
-            <a href="#" class="nav-link text-white">
+            <a href="{{route("admin.sales.index")}}" class="nav-link text-white">
 
                 <i class="bi bi-cart-check"></i>
 
