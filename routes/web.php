@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PurchaseController;
+use App\Http\Controllers\Admin\PurchaseReceiptController;
 use App\Http\Controllers\Admin\SupplierController;
 
 /*
@@ -114,5 +116,45 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     Route::delete('/products/{id}', [ProductController::class, 'destroy'])
         ->name('products.destroy');
+
+/*
+    |--------------------------------------------------------------------------
+    | Pruchase
+    |--------------------------------------------------------------------------
+    */
+
+    Route::get('/purchases',
+        [PurchaseController::class,'index'])
+        ->name('purchases.index');
+
+    Route::get('/purchases/create',
+        [PurchaseController::class,'create'])
+        ->name('purchases.create');
+
+    Route::post('/purchases/store',
+        [PurchaseController::class,'store'])
+        ->name('purchases.store');
+
+    Route::get('/purchases/{id}/edit',
+        [PurchaseController::class,'edit'])
+        ->name('purchases.edit');
+
+    Route::put('/purchases/{id}',
+        [PurchaseController::class,'update'])
+        ->name('purchases.update');
+
+    Route::delete('/purchases/{id}',
+        [PurchaseController::class,'destroy'])
+        ->name('purchases.destroy');
+
+/*
+    |--------------------------------------------------------------------------
+    | Pruchase invoice PDF
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/purchase-invoice/{id}',
+        [PurchaseReceiptController::class,'download'])
+        ->name('purchase.invoice');
+
 
 });

@@ -13,4 +13,14 @@ class Purchase extends Model
         "purchase_date",
         "total_amount"
     ];
+
+    public function supplier()
+    {
+        return $this->belongsTo(Supplier::class);
+    }
+
+    public function purchaseItems()
+    {
+        return $this->hasMany(PurchaseItem::class);
+    }
 }
