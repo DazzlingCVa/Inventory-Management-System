@@ -126,7 +126,7 @@
 
                             <th>Total Purchase</th>
 
-                            <td>0</td>
+                            <td>{{ $todayPurchases }}</td>
 
                         </tr>
 
@@ -134,7 +134,7 @@
 
                             <th>Total Sale</th>
 
-                            <td>0</td>
+                            <td>{{ $todaySales }}</td>
 
                         </tr>
 
@@ -142,7 +142,7 @@
 
                             <th>Available Products</th>
 
-                            <td>0</td>
+                            <td>{{  $availableProducts}}</td>
 
                         </tr>
 
